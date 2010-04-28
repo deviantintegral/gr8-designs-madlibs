@@ -1,8 +1,40 @@
+= Gr8 Designs Madlibs =
+Author: Andrew Berry
+Email: andrewberry@sentex.net
+http://www.abdevelopment.ca/
+
+This Django module is used to teach about the basics of Python. Topics covered
+in session include methods, string concatenation, and dictionaries, though those
+terms are rarely used in session. By the end of 90 minutes, participants will be
+able to run their own Python Madlibs, both in the console and in the Django
+environment. This allows them to create their own Madlibs, and put them "on the
+web" to share with their peers.
+
+For more information about Gr8 Designs for Gr8 Girls, see:
+http://www.gr8-designs.ca/
+
+= Requirements =
+
+To use the web frontend, Django is required. For best use with a lab of
+participants, Apache and mod_wsgi are recommended. These are easily installed on
+most Linux distributions.
+
+The session could be run without Django, though I imagine it would be less
+interesting for most of the participants.
+
 = Runtime Notes =
 
-- Use ./manage.py runserver 0.0.0.0:8000 to run a test server. Note that all imported code shares the same memory space, so this isn't a good idea for parallel access.
+* Use ./manage.py runserver 0.0.0.0:8000 to run a test server. Note that all
+imported code shares the same memory space, so this isn't a good idea for
+parallel access.
 
-- Apache's mod_python stores compiled python files in memory, and they take a while to expire.
+* Apache's mod_python stores compiled python files in memory, and they take a
+while to expire.
 
-- mod_wsgi doesn't have the issues of the built-in server and doesn't cache code, so it's the best solution.
+* mod_wsgi doesn't have the issues of the built-in server and doesn't cache
+code, so it's the best solution.
+
+* Currently, the module is always reloaded with reload(), but it's unclear how
+the various server implementations handle this call. mod_wsgi is the only one
+tested in production.
 
