@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Fill in the Madlib blanks!</p>
+<form method="POST">
+{% for element in form %}
+<div class="form-item">
+<label>{{ element.label }}:</label>
+{{ element }}
+</div>
+{% endfor %}
+<input type="submit" value="Submit" />
+</form>
+{% if story %}
+<h2>{{ madlib_name }} by {{ user }}</h2>
+<p>{{ story }}</p>
+{% endif %}
+<ul>
+  <li><a href=".">Go back to {{ user }}'s madlibs</a></li>
+</ul>
+{% endblock content %}

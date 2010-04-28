@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Getting Started</h2>
+<p>Here are the files you need to download and save. To get started, follow these steps:</p>
+<ol>
+  <li>Open the file for editing by clicking the <strong>computer icon</strong> in the lower left, and selecting <strong>"Home folder"</strong>. Open <strong>public_html</strong>, and click on <strong>MyMadLibs.py</strong> to edit it.</li>
+  <li>What is open now just lets you edit the program. To run it, click on the "K" menu in the bottom left. Under <strong>System</strong>, open <strong>Konsole</strong>.</li>
+  <li>In the console, type exactly <code>cd public_html</code> to take yourself to the public_html folder.</li>
+  <li>To run the example Madlib, or to run the Madlib as you change it, type <code>python2.5 MyMadLibs.py</code></li>
+  <li>If you want to start over again, you can download and save the <a href="data/MyMadLibs.py">MyMadLibs.py</a> file to the <strong>public_html folder</strong>, overwriting the old file.</li>
+</ol> 
+<h2>Try out other Madlibs!</h2>
+{% if user_names %}
+  <ul>
+  {% for user_name in user_names %}
+    <li>View <a href="{{ user_name }}">{{ user_name }}'s Madlibs</a></li>
+  {% endfor %}
+  </ul>
+{% endif %}
+{% endblock content %}
+
+{% block sidebar %}
+<h2>Useful links</h2>
+<ul>
+  <li><a href="http://www.python.org/">Python web site</a></li>
+  <li><a href="http://docs.python.org/">Python documentation</a></li>
+  <li><a href="http://www.cis.uoguelph.ca/">University of Guelph CIS website</a></li>
+</ul>
+{% endblock sidebar %}
+

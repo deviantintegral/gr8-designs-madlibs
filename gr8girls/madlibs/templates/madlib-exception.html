@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Oops! There was a problem loading this page.</h1>
+<p>The computer didn't understand some part of the program it tried to run while displaying this page. The error was:</p>
+
+<h2>{{ error.type }}: {{ error.message }}</h2>
+
+<h1>Solving errors</h1>
+<p>Here are some common errors and how to solve them:</p>
+<dl>
+<dt>ImportError</dt>
+<dd>This means that the web site was unable to find your Madlib program to read. Make sure that your program is in a file in the <strong>public_html</strong> directory called <strong>MyMadLibs.py</strong>.</dd>
+<dt>AttributeError</dt>
+<dd>This will show up when you attempt to view a madlib which doesn't exist. <a href="/">Go back home</a> to see an updated list of madlibs.</dd>
+<dt>SyntaxError</dt>
+<dd>This means that the website found your Madlib program to read, but didn't understand a line in the program. The error will be on the line number mentioned in the error message. Common mistakes include:
+  <ul>
+    <li>Not balancing quotes around text. If you start an open quote, be sure to end it at the right spot!</li>
+    <li>Mis-spelling a word.</li>
+    <li>Missing a comma in between items in a list. For example, for creating new blanks to fill in, <strong>each line should end with a comma</strong>. If this is the case, the line number actually causing the error will <strong>likely be the one before the one in the error message</strong>.</li>
+  </ul>
+</dd>
+<dt>IndentationError</dt>
+<dd>This means that you used an "if" or other statement ending in a colon without indenting in the next line. For example
+<pre>if blanks['name'] == andrew:
+print "Your name is andrew!"</pre>
+is incorrect, while
+<pre>if blanks['name'] == andrew:
+    print "Your name is andrew!"</pre>
+is fine.</dd>
+<dt>KeyError</dt>
+<dd>This means that you used a blank in your Madlib that was never set. This can happen if you make a mistake in reading the "blanks" variable. For example, <code>blanks['animal']</code> is different from <code>blanks['animal<strong>s</strong>']</code>.
+</dl>
+{% endblock content %}

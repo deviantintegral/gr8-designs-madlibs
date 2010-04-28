@@ -1,0 +1,56 @@
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background-color: #EEEEEE;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+dl dd {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.form-item {
+}
+
+.form-item label {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+  font-weight: bold;
+}
+
+table#logoarea {
+  background: #ff6699;
+}
+
+h1.blogtitle {
+  font-family: "tahoma, arial, sans-serif";
+  font-size: 33px;
+  letter-spacing: -1px;
+  line-height: 1em;
+  font-weight: bold;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+h1.blogtitle a {
+  color: #0A0A0A;
+}
+
+p.tagline {
+  color: #666666;
+}
+
+#sidebar {
+  float: right;
+  background-color: #FFFFFF;
+  width: 300px;
+}

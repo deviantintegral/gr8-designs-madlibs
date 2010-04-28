@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Here is a list of {{ user }}'s madlibs</h2>
+<ul>
+{% for class in classes %}
+  <li><a href="{{ class }}">{{ class }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %} 
