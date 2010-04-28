@@ -22,6 +22,10 @@ most Linux distributions.
 The session could be run without Django, though I imagine it would be less
 interesting for most of the participants.
 
+The client machines are best run with Linux or some other Unix. Contrary to my
+expectations, two years of participants are just fine adapting to Linux with no
+prior experience :)
+
 = Runtime Notes =
 
 * Use ./manage.py runserver 0.0.0.0:8000 to run a test server. Note that all
@@ -39,4 +43,14 @@ code, so it's the best solution.
 * Currently, the module is always reloaded with reload(), but it's unclear how
 the various server implementations handle this call. mod_wsgi is the only one
 tested in production.
+
+* The directory paths to look for MyMadLibs.py are currently hardcoded to match
+the University of Guelph systems. They will need to be changed or refactored to
+work on your own setup.
+
+* For simplicity, create your guest user accounts with a numbered suffix for easy
+generation by the web application.
+
+* The instructions on the Madlibs home page are for KDE 3.5 on Linux; modify or
+make pluggable for your own system if it's different.
 
