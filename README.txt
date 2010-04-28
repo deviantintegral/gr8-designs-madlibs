@@ -46,7 +46,7 @@ tested in production.
 
 * The directory paths to look for MyMadLibs.py are currently hardcoded to match
 the University of Guelph systems. They will need to be changed or refactored to
-work on your own setup.
+work on your own setup. See gr8girls/models/views.py for more details.
 
 * For simplicity, create your guest user accounts with a numbered suffix for easy
 generation by the web application.
