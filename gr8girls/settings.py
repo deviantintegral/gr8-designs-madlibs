@@ -9,6 +9,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+# This isn't actually used in the gr8girls project.
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = '/Users/andrew/Desktop/gr8girls.db'             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
@@ -48,7 +49,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'pz!#d$qk#=+t@b@tl#7txliwn5-ap@3s+y(-_)a+yszvd8c4vn'
+# SECRET_KEY = ''
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (

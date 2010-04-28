@@ -28,6 +28,8 @@ interesting for most of the participants.
 imported code shares the same memory space, so this isn't a good idea for
 parallel access.
 
+* Be sure to set SECRET_KEY in gr8girls/settings.py.
+
 * Apache's mod_python stores compiled python files in memory, and they take a
 while to expire.
 
